@@ -65,11 +65,14 @@ rolling_avg = []
 
 
 num_sum =0.0
+current_length = 0.0
 
-for idx, num in enumerate(num_list, 1):
+for idx, num in enumerate(num_list, 0):
   num_sum +=num
 
-  num_avg = num_sum/idx
+  current_length = idx+1
+
+  num_avg = num_sum/current_length
 
   rolling_avg.append(num_avg)
 
